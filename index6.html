@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+   //var time = 17;
+   //var isVip = true;
+   //var isGirl = false;
+   //if (isGirl && (isVip || (time >= 17 && time <= 21))){
+   //    alert ('欢迎进入网站');
+   //    if (isVip){
+   //        alert ('欢迎VIP用户');
+   //    }else{
+   //        alert ('请尽快办理VIP');
+   //    }
+   //}else{
+   //    alert ('不许进');
+   //}
+
+
+
+    //在14 52 67 145 60 250 529 4 80 中取出第一个大于100的值
+   // var arr = [14, 52, 67, 145, 60, 250, 529, 4, 80];
+   // for (var i = 0; i <= arr.length; i++){
+   //     if (arr[i] >= 100){
+   //         console.log(arr[i]);
+   //         break;
+   //     }
+   // }
+
+    //1 + 2 + 4 + 5 + .......+ 100 =？ 但要跳过所有3的倍数
+   // var total = 0;
+   // for (var i = 1; i <= 100; i++){
+   //     if (i % 3 == 0){
+   //         continue;
+   //     }
+   //     total += i;
+   // }
+   // console.log(total);
+
+
+
+
+    //1 + 2 + 4 + 5 + .......+ 100 =？ 但要跳过所有3的倍数和包含3的数字
+    var total = 0;
+    for (var i = 0; i <= 100; i++){
+        if (i % 3 == 0 || parseInt(i / 10) == 3 || i % 10 == 3){
+            continue;
+        }
+        total += i;
+    }
+    console.log(total);
+
+    //打印正方形图案10行10列的*
+
+    var htmlStr = '';
+    for(var i = 0; i < 10; i++){
+        for(var j = 0; j <10; j++){
+            htmlStr += '*'
+        }
+        htmlStr += '<br>';
+    }
+    document.write(htmlStr);
+    console.log(htmlStr);
+/////////////////////////////////////////////
+    for(var i = 10; i >= 1; i--){
+        for(var j = 1; j <= i; j++){
+            document.write('*');
+        }
+        document.write('<br>');
+    }
+   for(var i = 0; i <= 10; i++){
+       for(var j = 10; j >= i; j--){
+           document.write('*');
+       }
+       document.write('<br>');
+   }
+
+    //计算100 的阶乘
+    var num = 1;
+    for(var i = 1; i <= 100; i++){
+        num = num * i
+    }
+    console.log(num);
+
+   //计算闰年  能被4整除而不能被100整除 或 能被400整除
+
+    for (var i = 1950; i <= 2050; i++){
+        if((i % 4 ==0 && i % 100 != 0) || (i % 400 == 0) ){
+            console.log(i);
+        }
+    }
+
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+</head>
+<body>
+<script>
+    //************************************************
+    //必须是女生、VIP会员、普通人是17点到21点可以进入
+    /*var time = 17;
+     var isVip = true;
+     var isGirl = false;
+     if (isGirl && (isVip || (time >= 17 && time <= 21))){
+     alert('欢迎进入网站');
+     if (isVip){
+     alert ('欢迎VIP用户，送您一份大礼');
+     }else {
+     alert ('您还不是会员，请尽快办理VIP');
+     }
+     }else {
+     alert ('您没有访问权限');
+     }*/
+    //**********************************************
+    //在14 52 67 145 60 250 529 4 80 中取出第一个大于100的值
+    /*var arr = [14, 52, 67, 145, 60, 250, 529, 4, 80];
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i] > 100) {
+            console.log(arr[i]);
+            break;
+        }
+    }*/
+    //**********************************************
+    //1 + 2 + 4 + 5 + .......+ 100 =？ 但要跳过所有3的倍数
+    /*var total = 0;
+    for (var i = 1; i <= 100; i++) {
+        if (i % 3 == 0) {
+            continue;
+        }
+        total += i;
+    }
+    console.log(total);*/
+    //**********************************************
+    //1 + 2 + 4 + 5 + .......+ 100 =？ 但要跳过所有3的倍数和包含3的数字
+    /*var total = 0;
+    for (var i = 1; i <= 100; i++){
+        if (i % 3 == 0 || parseInt(i / 10) == 3 || i % 10 == 3){
+            continue;
+        }
+        total += i;
+    }
+    console.log(total);*/
+    //*********************************************
+    //打印正方形图案10行10列的*
+   /* for(var i = 0; i < 10; i++){
+        for(var j = 0; j < 10; j++){
+            document.write('*');
+        }
+        document.write('<br>');
+    }*/
+    //
+   /* var htmlStr = '';
+    for (var i = 0; i < 10; i++){
+        for (var j = 0; j < 10; j++){
+            htmlStr += '*';
+        }
+        htmlStr += '<br/>';
+    }
+    document.write(htmlStr);*/
+    //................................
+    //打印倒三角图案10行10列的*
+    /*for (var i = 0; i <= 10; i++){
+        for (var j = 10; j > i; j--){
+            document.write('*')
+        }
+        document.write('<br/>')
+    }*/
+    //
+    /*for (var i = 10; i >= 1; i--){
+        for (var j =1; j <= i; j++){
+            document.write('*');
+        }
+        document.write('<br/>')
+    }*/
+    //************************************
+    //计算100的阶乘
+    /*var num = 1;
+    for (var i = 1; i <= 100; i++){
+        num *= i;
+    }
+    console.log(num);*/
+    //************************************************
+    //计算(1950 — 2050）闰年  能被4整除而不能被100整除 或 能被400整除
+    /*for (var i = 1950; i <= 2050; i++){
+        if ((i % 4 ==0 && i % 100 != 0) || (i % 400 == 0)){
+            console.log(i);
+        }
+    }*/
+    //**********************************************
+    // 星期1 2 去一食堂，3 4 去二食堂，5 6 7去三食堂
+    //第一种方法：
+    /*var day = 4;
+     if (day == 1 || day == 2){
+     alert ('去一食堂');
+     }else if (day == 3 || day == 4){
+     alert ('去二食堂');
+     }else {
+     alert ('去三食堂');
+     }*/
+    //第二种放法
+    /* switch (day){
+     case 1:  //case表示全等 ===
+     case 2:
+     alert ('去一食堂');
+     break;  //终止当前条件
+     case 3:
+     case 4:
+     alert ('去二食堂');
+     break;
+     default:
+     alert ('去三食堂');
+     break;
+     }*/
+    //**********************************************
+    //数组练习
+    /*var cars =['BMW','Volvo','Saab','Ford']; //[]表示数组
+     for (var i = 0; i <=cars.length; i++){
+     document.write(cars[i] + '<br/>')
+     }*/
+    //***********************************************
+    //输出100到200之间的所有偶数
+    //第一种方法
+    /*for (var i = 100; i <= 200; i += 2){
+     document.write(i + '<br/>');
+     }*/
+    //第二种方法
+    /*var i = 100;
+     while (i <= 200){
+     document.write(i + '<br/>');
+     i += 2;
+     }*/
+    //*****************************************
+    //while 和 do while 小练习
+    //20内的奇数
+    /*var i = 0;
+     while (i < 20) {
+     i++;
+     if (i % 2 == 0) {
+     continue;
+     }
+     document.write(i + '<br/>')
+     }*/
+    ///////////////
+    /*var i = 1,
+     str = '';
+     do {
+     str = str + 'the number is' + i + '<br/>';
+     i++;
+     } while (i < 5){
+     document.write(str);
+     }*/
+    //********************************************
+    //有1元20张，2元10张，5元4张，用for循环计算组合为20元的方式：
+    /*for (var i = 0; i <= 20; i++){
+     for (var j = 0; j <= 10; j++){
+     for (var k = 0; k <= 4; k++){
+     if (i * 1 + j * 2 + k * 5 ==20){
+     document.write('1元的有' + i + '张，' + '2元的有' + j + '张，' + '5元的有' + k +'张。' + '<br/>');
+     }
+     }
+     }
+     }*/
+    //*****************************************
+    //99乘法表（使用table）
+    /* var htmlStr = '<table class="table table-bordered"> ';//使用bootstrap
+     for (var i = 1; i <= 9; i++){
+     htmlStr += '<tr>';
+     for (j = 1; j <= i; j++){
+     htmlStr += '<td>' + j + '*' +i + '=' + (i * j) + '</td>';
+     }
+     htmlStr += '</tr>';
+     }
+     htmlStr += '</table>';
+     document.write(htmlStr);*/
+    //*******************************************
+    //函数表达式
+    /*var chu = function (a , b){
+     return a / b;
+     }
+     document.write(chu(9 , 5));*/
+    //*********************************************
+    //函数作用域
+    /*var msg = 'wai' //全局函数
+     function fun1() {
+     alert (msg);
+     var msg1 = 'nei'; //局部函数
+     }
+     fun1 ();*/
+    //*******************************************
+    //求n 和 m　之间的和函数
+    /*function getSum (n , m){
+     var sum = 0;
+     if (n > m){     //当n>m时，要借用一个新的变量进行n 和 m的交换
+     var temp = m;
+     m = n;
+     n = temp;
+     }
+     for(var i = n; i <= m; i++){
+     sum += i;
+     }
+     return sum;
+     }
+     var result = getSum(4 , 1);
+     document.write(result);*/
+    //******************************************
+    //求圆面积的函数
+    /*function getCircleArea(r) {
+     if (r < 0){
+     alert ('错了');
+     }
+     var area = Math.PI * r * r; //Math.PI * Math.pow(r , 2）
+     return area;
+     }
+     document.write(getCircleArea(2));*/
+    //*******************************************
+    //object 对象
+    /* var zhege = {
+     name: '李哲',
+     age: 20,
+     home: '西安',
+     canCook: false,
+     babys: [
+     {
+     name: '李1',
+     sex: '女',
+     age: 1
+     },
+     {
+     name: '李2',
+     sex: '男',
+     age: 4
+     }
+     ],
+     sex: '男',
+     skills: ['html', 'css', 'js', 'ps'],
+     say: function (msg) {
+     },
+     eat: function (foods) {
+     for(var i = 0; i < foods.length; i++) {
+     alert('我吃了' + foods[i]);
+     }
+     }
+     }
+     console.log(zhege.age);
+     console.log(zhege.home);
+     console.log(zhege.skills);
+     zhege.say('大家好');
+     zhege.eat(['鸡腿', '可乐']);
+     zhege.eat(['鸭腿', '雪碧']);*/
+    //***********************************************
+    //string字符串例子
+    /*function find(str , searchStr) {
+     return str.indexOf(searchStr) == -1
+     }
+     var resultB = find ('一张网页，要经历怎样的过程，才能抵达用户的面前' , '用户')
+     console.log(resultB)
+     var resultB1 = find ('一张网页，要经历怎样的过程，才能抵达用户的面前' , '前端')
+     console.log(resultB1)*/
+    //*******************************************
+    //使用indexOF统计一个字符串出现的次数
+    /* function getWordCount(str , findStr) {
+     var count = 0;
+     var index = str.indexOf(findStr);
+     while (index != -1){
+     count++;
+     index = str.indexOf(findStr , index + 1);
+     }
+     return count;
+     }
+     var str = '我今天在淘宝上淘了一本书，我喜欢上淘宝，每天都会上淘宝';
+     console.log(getWordCount(str , '淘宝'));*/
+    //**************************************
+    //重复字符串的练习 abcabcabc
+   /* function  repeatStringNumTimes(str , num) {
+        var repeat = '';
+        for (var i = 1; i <= num; i++){
+            repeat += str;
+        }
+        return repeat;
+    }
+    var result = repeatStringNumTimes('abc' , 3);
+    console.log(result);*/
+    //
+    /*function repeatStringNumTimes(str , num) {
+        var repeat = ''
+        while (num > 0){
+            num--;
+            repeat += str
+        }
+        return repeat;
+    }
+    var result = repeatStringNumTimes("*", 3);
+    console.log(result)*/
+    //*******************************************
+
+
+</script>
+</body>
+</html>

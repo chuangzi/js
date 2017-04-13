@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> new document </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=gbk"/>
+    <script type="text/javascript">
+
+
+      function openWindow(){
+            alert(typeof (confirm("确定打开新窗口吗？")));/*判断返回值是什么类型*/
+          if(confirm("确定打开新窗口吗？")){
+
+              var url = prompt("请输入一个网址","http://www.imooc.com/");
+
+              window.open( url,"_blank","toolbar=no, menubar=no, scrollbars=yes, width=400, height=400");
+          }
+          else{
+              alert('离开');
+          }
+      }
+    /*function openWindpw(){
+        var newwin=confirm("确定打开新的窗口吗？");
+        if(newwin==true){
+        var wz=prompt("网址地址是：","http://www.imooc.com/");
+        window.open(wz,"_blank","width=400,height=500,menubar=no,toolbar=no,scrollbars=yes");
+        }
+     }*/
+    </script>
+</head>
+<body>
+<input type="button" value="新窗口打开网站" onclick="openWindow()" />
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+
+<script>
+   //for (var i = 0; i <= 20; i++){
+   //    for (var j = 0; j <= 10; j++){
+   //        if(i * 1 + j * 2 ==20){
+   //            console.log('凑够了')
+   //        }
+   //    }
+   //}
+
+    //for (var i = 0; i <= 20; i++){
+    //    for (var j = 0; j <= 10; j++){
+    //        for (var k = 0; k <= 4; k++){
+    //            if(i * 1 + j * 2 + k * 5 == 20){
+    //                console.log('凑够了');
+    //                document.write('一元有' + i + '两元有' + j + '五元有' + k + '<br/>')
+    //            }
+    //        }
+    //    }
+    //}
+    var htmlSrt = '<table class="table table-bordered"> ';
+    for (var i = 1; i <10; i++){
+        htmlSrt += '<tr>';
+        for(var j = 1; j <= i ; j++){
+           htmlSrt += '<td>' + j + '*'+ i + '=' + (i * j) +'</td>' ;
+        }
+        htmlSrt += '</tr>';
+    }
+    htmlSrt += '</table>';
+    document.write(htmlSrt);
+</script>
+
+
+
+</body>
+</html>

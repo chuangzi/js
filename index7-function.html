@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="beichushu"/> %
+<input type="text" id="chushu"/>
+<button style="background: #0DFFC8;" id="jisuan">计算</button>
+
+<script>
+    //var divsion = function(a , b){   函数表达式，与下面的函数声明相同
+    function divsion(a , b){    //函数声明
+        if(b == 0){
+            alert('警告');
+            return;  //结束函数
+        }
+        return a / b;
+    }
+    var jisuanBtn = document.getElementById('jisuan');
+    jisuanBtn.onclick = function () {
+        var chushu =document.getElementById('chushu').value;
+        var beichushu =document.getElementById('beichushu').value;
+        var result = divsion(beichushu ,chushu );
+        alert(result);
+    }
+
+    /*function say(msg){
+     alert(msg);
+     }
+     say('hi');*/
+    //
+    /*function add(a , b) {
+     return a + b;
+     }
+     var result = add(3 , 5);
+     console.log(result);*/
+    //函数表达式
+    /*var chu = function (a ,b) {
+        return a / b;
+    }
+    document.write(chu(6 , 2));*/
+    // 函数作用域
+    //
+    /*var msg ='wai';//全局函数
+    function fun1() {
+        alert (msg);
+        var msg1 = 'nei';//局部函数
+    }
+    fun1();*/
+
+    //求n 和 m之间和函数
+    function getSum(n , m){
+        var sum = 0;
+        if (n > m){
+            var temp = m;
+            m = n;
+            n = temp;
+        }
+        for(var i = n; i <= m; i++){
+            sum += i ;
+        }
+        return sum;
+    }
+    var result = getSum(4 , 1);
+    document.write(result);
+
+    //求圆面积的函数
+    function getCircleArea(r) {
+        if (r < 0){
+            alert('错了')
+        }
+        var  area = Math.PI * r * r; //Math.PI * Math.pow(r ,2)
+        return area;
+    }
+    document.write(getCircleArea(4));
+
+    //object 对象
+    var zhege = {
+        name : '李哲',  //键值对
+        age : 20,
+        sex : '男',
+        home : '西安',
+        canCook : false,
+        skill: ['html','css','js'],
+        babys: [
+            {
+                name: '李1',
+                sex: '女',
+                age: 1
+            },
+            {
+                name: '李2',
+                sex: '男',
+                age: 4
+            }
+        ],
+        say: function (msg) {
+            alert(msg);
+            alert('哈哈哈')
+        },
+        eat: function (foods) {
+            for (var i = 0; i < foods.length; i++) {
+                alert('我吃了' + foods[i]);
+            }
+        }
+        }
+    console.log(zhege.name);
+
+    var words = '我喜欢学习web前端';
+
+    words.indexOf('学');
+
+</script>
+
+
+</body>
+</html>
